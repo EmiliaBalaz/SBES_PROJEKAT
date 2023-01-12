@@ -1,0 +1,15 @@
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\obj\Debug\Klijent.csproj.AssemblyReference.cache
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\obj\Debug\Klijent.csproj.CoreCompileInputs.cache
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\bin\Debug\Klijent.exe.config
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\bin\Debug\Klijent.exe
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\bin\Debug\Klijent.pdb
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\bin\Debug\Manager.dll
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\bin\Debug\ServiceContracts.dll
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\bin\Debug\XMSServer.exe
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\bin\Debug\Manager.pdb
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\bin\Debug\ServiceContracts.pdb
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\bin\Debug\XMSServer.pdb
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\bin\Debug\XMSServer.exe.config
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\obj\Debug\Klijent.csproj.CopyComplete
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\obj\Debug\Klijent.exe
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Klijent\obj\Debug\Klijent.pdb

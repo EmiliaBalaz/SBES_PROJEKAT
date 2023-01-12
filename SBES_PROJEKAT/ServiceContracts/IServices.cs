@@ -14,13 +14,13 @@ namespace ServiceContracts
         void AddPerson(string key, Osoba osoba);
 
         [OperationContract]
-        bool DeletePerson(string key);
+        void DeletePerson(string key);
 
         [OperationContract]
         void Read(string key);
 
         [OperationContract]
-        bool DeleteFile();
+        void DeleteFile();
         [OperationContract]
         void CreateFile();
 

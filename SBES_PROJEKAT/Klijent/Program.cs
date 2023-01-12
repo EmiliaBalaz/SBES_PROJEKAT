@@ -16,7 +16,7 @@ namespace Klijent
     {
         static void Main(string[] args)
         {
-            string srvCertCN = "wcfservice"; //wcfservice
+            string srvCertCN = "emily"; //wcfservice
             NetTcpBinding binding = new NetTcpBinding();
 
             binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;

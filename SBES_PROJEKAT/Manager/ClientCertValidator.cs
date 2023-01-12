@@ -18,6 +18,6 @@ namespace Manager
                     throw new Exception("Certificate is self-issued.");
                 }
             }
-        }
+        
     }
 }

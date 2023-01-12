@@ -58,31 +58,27 @@ namespace Klijent
             }
         }
 
-        public bool DeleteFile()
+        public void DeleteFile()
         {
             try
             {
                 factory.DeleteFile();
-                return true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                return false;
             }
         }
 
-        public bool DeletePerson(string key)
+        public void DeletePerson(string key)
         {
             try
             {
                 factory.DeletePerson(key);
-                return true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                return false;
             }
         }
 

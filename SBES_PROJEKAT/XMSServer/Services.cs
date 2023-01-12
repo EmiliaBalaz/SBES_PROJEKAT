@@ -1,4 +1,5 @@
-﻿using ServiceContracts;
+﻿using Manager;
+using ServiceContracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,15 +17,29 @@ namespace XMSServer
 
         public void CreateFile()
         {
-            throw new NotImplementedException();
+            try
+            { 
+                XMLWritter.CreateXmlFile();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}.", e.Message);
+            }
         }
 
-        public bool DeleteFile()
+        public void DeleteFile()
         {
-            throw new NotImplementedException();
+            try
+            {
+                XMLWritter.DeleteXmlFile();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}.", e.Message);
+            }
         }
 
-        public bool DeletePerson(string key)
+        public void DeletePerson(string key)
         {
             throw new NotImplementedException();
         }

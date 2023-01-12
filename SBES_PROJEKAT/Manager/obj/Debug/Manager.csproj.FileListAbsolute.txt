@@ -1,0 +1,6 @@
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Manager\bin\Debug\Manager.dll
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Manager\bin\Debug\Manager.pdb
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Manager\obj\Debug\Manager.dll
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Manager\obj\Debug\Manager.pdb
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\Manager\obj\Debug\Manager.csproj.AssemblyReference.cache

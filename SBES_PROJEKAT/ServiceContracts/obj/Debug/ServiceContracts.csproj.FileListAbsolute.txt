@@ -1,0 +1,5 @@
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\ServiceContracts\bin\Debug\ServiceContracts.dll
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\ServiceContracts\bin\Debug\ServiceContracts.pdb
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\ServiceContracts\obj\Debug\ServiceContracts.csproj.CoreCompileInputs.cache
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\ServiceContracts\obj\Debug\ServiceContracts.dll
+C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\ServiceContracts\obj\Debug\ServiceContracts.pdb
