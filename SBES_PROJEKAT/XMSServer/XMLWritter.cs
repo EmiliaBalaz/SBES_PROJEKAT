@@ -23,7 +23,7 @@ namespace XMSServer
         {
             string accountName = Formater.ParseName(WindowsIdentity.GetCurrent().Name.ToLower());
             Console.WriteLine(accountName);
-            string path = $"C:\\Users\\Emily\\Desktop\\SBES_novi\\SBES_PROJEKAT\\Manager\\{nazivKlijenta}.xml";
+            string path = $"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{nazivKlijenta}.xml";
             using (XmlWriter writer = XmlWriter.Create(path))
             {
                 writer.WriteStartElement("List");
@@ -40,12 +40,13 @@ namespace XMSServer
         public static void DeleteXmlFile(string imeKlijenta)
         {
 
-            try
-            {
-                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
-                File.Delete(path);
+            
+           
+                
                 try
                 {
+                    string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
+                    File.Delete(path);
                     Audit.AuthorizationSuccess(imeKlijenta,
                                     OperationContext.Current.IncomingMessageHeaders.Action);
 
@@ -53,38 +54,36 @@ namespace XMSServer
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error: {0}", ex.Message);
-                }
-            }
-            catch (Exception e)
-            {
-                DateTime time = DateTime.Now;
+                    DateTime time = DateTime.Now;
 
-                times.Add(time);
-                foreach (DateTime time1 in times)
-                {
-                    if ((times[times.Count - 1] - time1).TotalSeconds > period)
+                    times.Add(time);
+                    foreach (DateTime time1 in times)
                     {
-                        times.Remove(time1);
+                        if ((times[times.Count - 1] - time1).TotalSeconds > period)
+                        {
+                            times.Remove(time1);
+                        }
+                    }
+                    if (times.Count >= brojPokusaja + 1)
+                    {
+                        //to do
+                        Audit.AuthorizationFailed(imeKlijenta,
+                        OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "CRITICAL LEVEL: ");
+                    }
+                    else if (times.Count == brojPokusaja)
+                    {
+                        //medium risk
+                        Audit.AuthorizationFailed(imeKlijenta,
+                        OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "MEDIUM LEVEL: ");
+                    }
+                    else
+                    {
+                        Audit.AuthorizationFailed(imeKlijenta,
+                        OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "LOW LEVEL: ");
                     }
                 }
-                if (times.Count >= brojPokusaja + 1)
-                {
-                    //to do
-                    Audit.AuthorizationFailed(imeKlijenta,
-                    OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "CRITICAL LEVEL: ");
-                }
-                else if (times.Count == brojPokusaja)
-                {
-                    //medium risk
-                    Audit.AuthorizationFailed(imeKlijenta,
-                    OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "MEDIUM LEVEL: ");
-                }
-                else
-                {
-                    Audit.AuthorizationFailed(imeKlijenta,
-                    OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "LOW LEVEL: ");
-                }
-            }
+            
+            
         }
 
 
@@ -92,7 +91,7 @@ namespace XMSServer
         {
             try
             {
-                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
+                string path = $"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{imeKlijenta}.xml";
                 var xml = XDocument.Load(path);
                 var root = xml.Root;
                 root.Add(new XElement("Osoba", new XElement("Id", osoba.Id),
@@ -113,7 +112,7 @@ namespace XMSServer
         {
             try
             {
-                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
+                string path = $"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{imeKlijenta}.xml";
                 var xml = XDocument.Load(path);
                 var root = xml.Root;
                 foreach (var element in root.Elements())
@@ -140,7 +139,7 @@ namespace XMSServer
         {
             try
             {
-                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
+                string path = $"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{imeKlijenta}.xml";
 
                 var xml = XDocument.Load(path);
 

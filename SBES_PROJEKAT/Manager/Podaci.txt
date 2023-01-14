@@ -1,0 +1,103 @@
+ 
+TIME: 14.1.2023. 20:31:50
+: User emily failed to access http://tempuri.org/IServices/CreateFile. Reason: CreateFile method need CreateFiles permission..
+14.1.2023. 20:32:04User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:32:10User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:32:20User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:32:26User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:32:31User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:32:35User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:32:40User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:32:45User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:33:03User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+TIME: 14.1.2023. 20:33:06 : User emily failed to access http://tempuri.org/IServices/AddPerson. Reason: WriteToXml method need Modify permission..
+TIME: 14.1.2023. 20:33:11 : User emily failed to access http://tempuri.org/IServices/Read. Reason: ReadFromXml method need Read permission..
+ 
+14.1.2023. 20:41:53User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 20:42:03User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:42:15User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:42:21User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:42:25User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:42:30User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+ 
+14.1.2023. 20:47:19User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 20:47:26User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:47:40User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:47:48User emily successfully accessed to http://tempuri.org/IServices/DeletePerson.
+ 
+14.1.2023. 20:50:27User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 20:50:34User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+TIME: 14.1.2023. 20:50:35
+LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:50:41
+LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:50:46
+LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:50:50
+LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:50:55
+MEDIUM LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:51:00
+CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+14.1.2023. 20:51:57User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 20:52:00User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:52:06User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+TIME: 14.1.2023. 20:52:10LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:11LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:12LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:13LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:14MEDIUM LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:14CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:15CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:15CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:16CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:16CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:27CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:52:27CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+14.1.2023. 20:53:05User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 20:53:23User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:54:18User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 20:54:24User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:54:38User wcfclient successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 20:54:41User wcfclient successfully accessed to http://tempuri.org/IServices/AddPerson.
+TIME: 14.1.2023. 20:54:44LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:54:45LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:54:45LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:54:46LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:54:46MEDIUM LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:54:46CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:54:47CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:54:47CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 20:54:47CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+14.1.2023. 20:54:54User wcfclient successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:54:57User wcfclient successfully accessed to http://tempuri.org/IServices/DeletePerson.
+14.1.2023. 20:55:00User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:01User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:02User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:14User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:15User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:15User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:15User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:16User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:16User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:16User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:17User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:55:17User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:56:54User wcfclient successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 20:56:56User wcfclient successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:56:58User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:57:07User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:57:07User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:57:08User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:57:08User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:58:40User wcfclient successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 20:58:44User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:58:49User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:58:50User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:58:50User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:58:51User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:58:51User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:58:51User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 20:59:43User wcfclient successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 20:59:50User wcfclient successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 20:59:51User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.

@@ -76,7 +76,7 @@ namespace XMSServer
                 }
                 catch (Exception e)
                 {
-                    string path = "D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\XMSServer\\bin\\Debug\\temp.txt";
+                    string path = "C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\XMSServer\\bin\\Debug\\temp.txt";
                     if (File.Exists(path))
                     {
                         TextWriter tw = new StreamWriter(path, true);
@@ -128,7 +128,7 @@ namespace XMSServer
                 }
                 catch (Exception e)
                 {
-                    string path = "D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\XMSServer\\bin\\Debug\\temp.txt";
+                    string path = "C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\XMSServer\\bin\\Debug\\temp.txt";
                     if (File.Exists(path))
                     {
                         TextWriter tw = new StreamWriter(path, true);

@@ -9,6 +9,7 @@ using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.ServiceModel.Security;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace XMSServer
@@ -51,6 +52,9 @@ namespace XMSServer
                 host.Open();
                 Console.WriteLine("WCFService is started.\nPress <enter> to stop ...");
 
+                Konekcija konekcija = new Konekcija();
+                Thread thr = new Thread(new ThreadStart(konekcija.ProveraKonekcije));
+                thr.Start();
 
                 Console.ReadLine();
             }

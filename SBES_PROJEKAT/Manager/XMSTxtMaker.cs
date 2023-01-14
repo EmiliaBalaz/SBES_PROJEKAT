@@ -11,7 +11,7 @@ namespace Manager
     {
         public static void CreateTxt(string serverName)
         {
-            string pathTxt = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{serverName}.txt";
+            string pathTxt = $"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{serverName}.txt";
             if (!File.Exists(pathTxt))
             {
                 StreamWriter sw = File.CreateText(pathTxt);
@@ -21,7 +21,7 @@ namespace Manager
 
         public static void WriteToTxt(string serverName, string message)
         {
-            string pathTxt = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{serverName}.txt";
+            string pathTxt = $"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{serverName}.txt";
 
             TextWriter tw = new StreamWriter(pathTxt, true);
             tw.WriteLine(message);

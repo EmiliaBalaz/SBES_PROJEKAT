@@ -23,22 +23,21 @@ namespace XMSServer
             }
         }
 
-        public void CreateFile(string nazivKlijenta)
+        public void CreateFile(string imeKlijenta)
         {
             try
-            { 
-                XMLWritter.CreateXmlFile(nazivKlijenta);
-                Console.WriteLine($"Klijent koji je kreirao fajl je: {nazivKlijenta}!");
-                Audit.AuthorizationSuccess(nazivKlijenta,
+            {
+                XMLWritter.CreateXmlFile(imeKlijenta);
+                Console.WriteLine($"Klijent koji je kreirao fajl je: {imeKlijenta}!");
+                Audit.AuthorizationSuccess(imeKlijenta,
                 OperationContext.Current.IncomingMessageHeaders.Action);
 
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}.", e.Message);
-                Audit.AuthorizationFailed(nazivKlijenta,
+                Audit.AuthorizationFailed(imeKlijenta,
                     OperationContext.Current.IncomingMessageHeaders.Action, "CreateFile method need CreateFiles permission.", "");
-
             }
         }
 

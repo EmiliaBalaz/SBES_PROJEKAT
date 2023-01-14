@@ -27,7 +27,7 @@ namespace MASServer
             {
                 Console.WriteLine("Sign is valid");
                 Console.WriteLine(message);
-                //WriteToTXT.WriteToTxt(message);
+                WriteToTXT.WriteToTxt(message);
             }
             else
             {
