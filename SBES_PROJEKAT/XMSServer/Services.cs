@@ -3,6 +3,7 @@ using ServiceContracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,6 +32,10 @@ namespace XMSServer
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}.", e.Message);
+                Console.WriteLine($"Klijent koji je kreirao fajl je: {nazivKlijenta}!");
+                Audit.AuthorizationSuccess(nazivKlijenta,
+                OperationContext.Current.IncomingMessageHeaders.Action);
+
             }
         }
 
