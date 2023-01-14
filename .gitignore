@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SBES_PROJEKAT/.vs/SBES_PROJEKAT/FileContentIndex/5deb6101-aae7-4a58-a4ad-821fe70bfadb.vsidx
+*.vsidx
