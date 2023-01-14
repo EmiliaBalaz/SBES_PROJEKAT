@@ -109,11 +109,11 @@ namespace XMSServer
                    OperationContext.Current.IncomingMessageHeaders.Action, "WriteToXml method need Modify permission.", " ");
             }
         }
-        public static void DeleteFromXml(string id, string nazivKlijenta)
+        public static void DeleteFromXml(string id, string imeKlijenta)
         {
             try
             {
-                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{nazivKlijenta}.xml";
+                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
                 var xml = XDocument.Load(path);
                 var root = xml.Root;
                 foreach (var element in root.Elements())
@@ -125,20 +125,22 @@ namespace XMSServer
                     }
                 }
                 xml.Save(path);
-
+                Audit.AuthorizationSuccess(imeKlijenta,
+                OperationContext.Current.IncomingMessageHeaders.Action);
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}", e.Message);
-
+                Audit.AuthorizationFailed(imeKlijenta,
+                   OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFromXml method need Modify permission.", " ");
             }
         }
 
-        public static void ReadFromXml(string id, string nazivKlijenta)
+        public static void ReadFromXml(string id, string imeKlijenta)
         {
             try
             {
-                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{nazivKlijenta}.xml";
+                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
 
                 var xml = XDocument.Load(path);
 
@@ -153,11 +155,14 @@ namespace XMSServer
                         break;
                     }
                 }
+                Audit.AuthorizationSuccess(imeKlijenta,
+                OperationContext.Current.IncomingMessageHeaders.Action);
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}", e.Message);
-
+                Audit.AuthorizationFailed(imeKlijenta,
+                   OperationContext.Current.IncomingMessageHeaders.Action, "ReadFromXml method need Read permission.", " ");
             }
         }
     }   

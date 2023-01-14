@@ -116,7 +116,36 @@ namespace XMSServer
                     AuditEvents.AuthorizationFailed;
                 string message = String.Format(AuthorizationFailed,
                     userName, serviceName, reason);
+                Console.WriteLine(message);
                 customLog.WriteEntry(message);
+                string serverName = Formater.ParseName(WindowsIdentity.GetCurrent().Name.ToLower());
+                string message2 = "TIME: " + DateTime.Now.ToString() + $"\r{risk}: " + message;
+                Manager.XMSTxtMaker.WriteToTxt(serverName, message2);
+
+                try
+                {
+                    XMSKlijent.PosaljiPoruku(message2);
+                }
+                catch (Exception e)
+                {
+                    string path = "D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\XMSServer\\bin\\Debug\\temp.txt";
+                    if (File.Exists(path))
+                    {
+                        TextWriter tw = new StreamWriter(path, true);
+                        tw.WriteLine(message2);
+                        tw.Close();
+                    }
+                    else
+                    {
+                        StreamWriter sw = File.CreateText(path);
+                        sw.Close();
+                        TextWriter tw = new StreamWriter(path, true);
+                        tw.WriteLine(message2);
+                        tw.Close();
+                    }
+                    Console.WriteLine("Error: {0}", e.Message);
+                }
+
             }
             else
             {

@@ -13,3 +13,12 @@ C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\Manager\obj\Debug\Manager.csp
 C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\Manager\obj\Debug\Manager.csproj.CopyComplete
 C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\Manager\obj\Debug\Manager.dll
 C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\Manager\obj\Debug\Manager.pdb
+C:\git\SBES_PROJEKAT\SBES_PROJEKAT\Manager\bin\Debug\Manager.dll
+C:\git\SBES_PROJEKAT\SBES_PROJEKAT\Manager\bin\Debug\Manager.pdb
+C:\git\SBES_PROJEKAT\SBES_PROJEKAT\Manager\bin\Debug\ServiceContracts.dll
+C:\git\SBES_PROJEKAT\SBES_PROJEKAT\Manager\bin\Debug\ServiceContracts.pdb
+C:\git\SBES_PROJEKAT\SBES_PROJEKAT\Manager\obj\Debug\Manager.csproj.AssemblyReference.cache
+C:\git\SBES_PROJEKAT\SBES_PROJEKAT\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
+C:\git\SBES_PROJEKAT\SBES_PROJEKAT\Manager\obj\Debug\Manager.csproj.CopyComplete
+C:\git\SBES_PROJEKAT\SBES_PROJEKAT\Manager\obj\Debug\Manager.dll
+C:\git\SBES_PROJEKAT\SBES_PROJEKAT\Manager\obj\Debug\Manager.pdb
