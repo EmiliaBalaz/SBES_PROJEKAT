@@ -36,7 +36,8 @@ namespace XMSServer
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}.", e.Message);
-                Audit.AuthorizationFailed(nazivKlijenta,OperationContext.Current.IncomingMessageHeaders.Action, "CreateFile method need CreateFiles permission.", "");
+                Audit.AuthorizationFailed(nazivKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "CreateFile method need CreateFiles permission.", "");
 
             }
         }

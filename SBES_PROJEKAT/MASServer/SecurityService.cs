@@ -16,8 +16,6 @@ namespace MASServer
     {
         public void TestMetoda(string message, byte[] signature)
         {
-
-
             string clienName = Formater.ParseName(ServiceSecurityContext.Current.PrimaryIdentity.Name.ToLower());
 
             string clientNameSign = clienName + "_sign";

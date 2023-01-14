@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Manager;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -62,6 +65,34 @@ namespace XMSServer
                 string message = String.Format(AuthorizationSuccess,
                     userName, serviceName);
                 customLog.WriteEntry(message);
+                Console.WriteLine(message);
+                customLog.WriteEntry(message);
+                string serverName = Formater.ParseName(WindowsIdentity.GetCurrent().Name.ToLower());
+                Manager.XMSTxtMaker.WriteToTxt(serverName, message);
+
+                try
+                {
+                    XMSKlijent.PosaljiPoruku(DateTime.Now.ToString() + message);
+                }
+                catch (Exception e)
+                {
+                    string path = "D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\XMSServer\\bin\\Debug\\temp.txt";
+                    if (File.Exists(path))
+                    {
+                        TextWriter tw = new StreamWriter(path, true);
+                        tw.WriteLine(DateTime.Now.ToString() + message);
+                        tw.Close();
+                    }
+                    else
+                    {
+                        StreamWriter sw = File.CreateText(path);
+                        sw.Close();
+                        TextWriter tw = new StreamWriter(path, true);
+                        tw.WriteLine(DateTime.Now.ToString() + message);
+                        tw.Close();
+                    }
+                    Console.WriteLine("Error: {0}", e.Message);
+                }
             }
             else
             {
@@ -69,6 +100,7 @@ namespace XMSServer
                     (int)AuditEventTypes.AuthorizationSuccess));
             }
         }
+    
 
         /// <summary>
         /// 
