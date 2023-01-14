@@ -10,3 +10,15 @@ C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\MASServer\bin\Debug\ServiceContra
 C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\MASServer\obj\Debug\MASServer.csproj.CopyComplete
 C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\MASServer\obj\Debug\MASServer.exe
 C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\MASServer\obj\Debug\MASServer.pdb
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\bin\Debug\MASServer.exe.config
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\bin\Debug\MASServer.exe
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\bin\Debug\MASServer.pdb
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\bin\Debug\Manager.dll
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\bin\Debug\ServiceContracts.dll
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\bin\Debug\Manager.pdb
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\bin\Debug\ServiceContracts.pdb
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\obj\Debug\MASServer.csproj.AssemblyReference.cache
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\obj\Debug\MASServer.csproj.CoreCompileInputs.cache
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\obj\Debug\MASServer.csproj.CopyComplete
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\obj\Debug\MASServer.exe
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\MASServer\obj\Debug\MASServer.pdb

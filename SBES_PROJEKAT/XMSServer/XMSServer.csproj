@@ -57,6 +57,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services.cs" />
+    <Compile Include="XMLWritter.cs" />
     <Compile Include="XMSKlijent.cs" />
   </ItemGroup>
   <ItemGroup>

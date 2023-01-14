@@ -1,19 +1,24 @@
-﻿using ServiceContracts;
+﻿using Manager;
+using ServiceContracts;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.AccessControl;
 using System.Security.Principal;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace Manager
+namespace XMSServer
 {
     public class XMLWritter
     {
+        static List<DateTime> times = new List<DateTime>();
+        static int period = 30;
+        static int brojPokusaja = 5;
         public static void CreateXmlFile(string nazivKlijenta)
         {
             string accountName = Formater.ParseName(WindowsIdentity.GetCurrent().Name.ToLower());
@@ -32,31 +37,76 @@ namespace Manager
             AccessControlList.AddDeny(accountName, nemaPristupa, $"{nazivKlijenta}.xml");
         }
 
-        public static void DeleteXmlFile(string nazivKlijenta)
+        public static void DeleteXmlFile(string imeKlijenta)
         {
 
-                string path = $"C:\\Users\\Emily\\Desktop\\SBES_novi\\SBES_PROJEKAT\\Manager\\{nazivKlijenta}.xml";
+            try
+            {
+                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
                 File.Delete(path);
+                try
+                {
+                    Audit.AuthorizationSuccess(imeKlijenta,
+                                    OperationContext.Current.IncomingMessageHeaders.Action);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: {0}", ex.Message);
+                }
+            }
+            catch (Exception e)
+            {
+                DateTime time = DateTime.Now;
+
+                times.Add(time);
+                foreach (DateTime time1 in times)
+                {
+                    if ((times[times.Count - 1] - time1).TotalSeconds > period)
+                    {
+                        times.Remove(time1);
+                    }
+                }
+                if (times.Count >= brojPokusaja + 1)
+                {
+                    //to do
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "CRITICAL LEVEL: ");
+                }
+                else if (times.Count == brojPokusaja)
+                {
+                    //medium risk
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "MEDIUM LEVEL: ");
+                }
+                else
+                {
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "LOW LEVEL: ");
+                }
+            }
         }
 
 
-        public static void WriteToXml(Osoba osoba, string nazivKlijenta)
+        public static void WriteToXml(Osoba osoba, string imeKlijenta)
         {
             try
             {
-                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{nazivKlijenta}.xml";
+                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
                 var xml = XDocument.Load(path);
                 var root = xml.Root;
                 root.Add(new XElement("Osoba", new XElement("Id", osoba.Id),
                                   new XElement("Naziv", osoba.Naziv),
                                   new XElement("Tip", osoba.TipOsobe.ToString())));
                 xml.Save(path);
-
+                Audit.AuthorizationSuccess(imeKlijenta,
+                OperationContext.Current.IncomingMessageHeaders.Action);
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}", e.Message);
-
+                Audit.AuthorizationFailed(imeKlijenta,
+                   OperationContext.Current.IncomingMessageHeaders.Action, "WriteToXml method need Modify permission.", " ");
             }
         }
         public static void DeleteFromXml(string id, string nazivKlijenta)
@@ -84,7 +134,7 @@ namespace Manager
             }
         }
 
-        public static void ReadFromXml(string id,string nazivKlijenta)
+        public static void ReadFromXml(string id, string nazivKlijenta)
         {
             try
             {
@@ -110,11 +160,5 @@ namespace Manager
 
             }
         }
-
-
-
-
-
-
-    }
+    }   
 }
