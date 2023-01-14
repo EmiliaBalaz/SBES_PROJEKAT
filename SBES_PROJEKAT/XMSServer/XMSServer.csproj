@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Audit.cs" />
     <Compile Include="ClientProxy.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="Program.cs" />
