@@ -28,13 +28,15 @@ namespace XMSServer
             try
             { 
                 XMLWritter.CreateXmlFile(nazivKlijenta);
+                Console.WriteLine($"Klijent koji je kreirao fajl je: {nazivKlijenta}!");
+                Audit.AuthorizationSuccess(nazivKlijenta,
+                OperationContext.Current.IncomingMessageHeaders.Action);
+
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}.", e.Message);
-                Console.WriteLine($"Klijent koji je kreirao fajl je: {nazivKlijenta}!");
-                Audit.AuthorizationSuccess(nazivKlijenta,
-                OperationContext.Current.IncomingMessageHeaders.Action);
+                Audit.AuthorizationFailed(nazivKlijenta,OperationContext.Current.IncomingMessageHeaders.Action, "CreateFile method need CreateFiles permission.", "");
 
             }
         }
