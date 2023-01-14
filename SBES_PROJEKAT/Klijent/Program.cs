@@ -53,23 +53,23 @@ namespace Klijent
                             Console.WriteLine("Naziv: ");
                             string naziv = Console.ReadLine();
 
-                            proxy.AddPerson(id, new Osoba(Tip.STUDENT, naziv, id));
+                            proxy.AddPerson(id, new Osoba(Tip.STUDENT, naziv, id),nazivKlijenta);
                             break;
                         case "2":
                             Console.WriteLine("Unesite id osobe: ");
                             string idOs = Console.ReadLine();
-                            proxy.DeletePerson(idOs);
+                            proxy.DeletePerson(idOs,nazivKlijenta);
                             break;
                         case "3":
                             Console.WriteLine("unesite id osobe: ");
                             string idCitanje = Console.ReadLine();
-                            proxy.Read(idCitanje);
+                            proxy.Read(idCitanje,nazivKlijenta);
                             break;
                         case "4":
-                            proxy.DeleteFile();
+                            proxy.DeleteFile(nazivKlijenta);
                             break;
                         case "5":
-                            proxy.CreateFile();
+                            proxy.CreateFile(nazivKlijenta);
                             break;
                         default:
                             break;

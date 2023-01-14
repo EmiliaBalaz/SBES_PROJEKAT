@@ -52,5 +52,11 @@
     <Compile Include="ServiceCertValidator.cs" />
     <Compile Include="XMLWritter.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceContracts\ServiceContracts.csproj">
+      <Project>{E92596C6-A915-499D-9642-5324DDEAC11F}</Project>
+      <Name>ServiceContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

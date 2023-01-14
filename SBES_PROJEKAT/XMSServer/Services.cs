@@ -10,16 +10,23 @@ namespace XMSServer
 {
     public class Services : IServices
     {
-        public void AddPerson(string key, Osoba osoba)
+        public void AddPerson(string key, Osoba osoba,string nazivKlijenta)
         {
-            throw new NotImplementedException();
+            try
+            {
+                XMLWritter.WriteToXml(osoba, nazivKlijenta);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}.", e.Message);
+            }
         }
 
-        public void CreateFile()
+        public void CreateFile(string nazivKlijenta)
         {
             try
             { 
-                XMLWritter.CreateXmlFile();
+                XMLWritter.CreateXmlFile(nazivKlijenta);
             }
             catch (Exception e)
             {
@@ -27,11 +34,11 @@ namespace XMSServer
             }
         }
 
-        public void DeleteFile()
+        public void DeleteFile(string nazivKlijenta)
         {
             try
             {
-                XMLWritter.DeleteXmlFile();
+                XMLWritter.DeleteXmlFile(nazivKlijenta);
             }
             catch (Exception e)
             {
@@ -39,14 +46,28 @@ namespace XMSServer
             }
         }
 
-        public void DeletePerson(string key)
+        public void DeletePerson(string key, string nazivKlijenta)
         {
-            throw new NotImplementedException();
+            try
+            {
+                XMLWritter.DeleteFromXml(key, nazivKlijenta);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}.", e.Message);
+            }
         }
 
-        public void Read(string key)
+        public void Read(string key, string nazivKlijenta)
         {
-            throw new NotImplementedException();
+            try
+            {
+                XMLWritter.ReadFromXml(key, nazivKlijenta);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}.", e.Message);
+            }
         }
     }
 }

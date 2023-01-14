@@ -11,18 +11,18 @@ namespace ServiceContracts
     public interface IServices
     {
         [OperationContract]
-        void AddPerson(string key, Osoba osoba);
+        void AddPerson(string key, Osoba osoba,string nazivKlijenta);
 
         [OperationContract]
-        void DeletePerson(string key);
+        void DeletePerson(string key,string nazivKlijenta);
 
         [OperationContract]
-        void Read(string key);
+        void Read(string key, string nazivKlijenta);
 
         [OperationContract]
-        void DeleteFile();
+        void DeleteFile(string nazivKlijenta);
         [OperationContract]
-        void CreateFile();
+        void CreateFile(string nazivKlijenta);
 
     }
 }

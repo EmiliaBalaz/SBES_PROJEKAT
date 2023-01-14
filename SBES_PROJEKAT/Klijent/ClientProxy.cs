@@ -31,11 +31,11 @@ namespace Klijent
 
             factory = this.CreateChannel();
         }
-        public void AddPerson(string key, Osoba osoba)
+        public void AddPerson(string key, Osoba osoba, string nazivKlijenta)
         {
             try
             {
-                factory.AddPerson(key, osoba);
+                factory.AddPerson(key, osoba,nazivKlijenta);
 
             }
             catch (Exception ex)
@@ -45,11 +45,11 @@ namespace Klijent
             }
         }
 
-        public void CreateFile()
+        public void CreateFile(string nazivKlijenta)
         {
             try
             {
-                factory.CreateFile();
+                factory.CreateFile(nazivKlijenta);
             }
             catch (Exception ex)
             {
@@ -58,11 +58,11 @@ namespace Klijent
             }
         }
 
-        public void DeleteFile()
+        public void DeleteFile(string nazivKlijenta)
         {
             try
             {
-                factory.DeleteFile();
+                factory.DeleteFile(nazivKlijenta);
             }
             catch (Exception ex)
             {
@@ -70,11 +70,11 @@ namespace Klijent
             }
         }
 
-        public void DeletePerson(string key)
+        public void DeletePerson(string key, string nazivKlijenta)
         {
             try
             {
-                factory.DeletePerson(key);
+                factory.DeletePerson(key,nazivKlijenta);
             }
             catch (Exception ex)
             {
@@ -92,11 +92,11 @@ namespace Klijent
             this.Close();
         }
 
-        public void Read(string key)
+        public void Read(string key, string nazivKlijenta)
         {
             try
             {
-                factory.Read(key); ;
+                factory.Read(key,nazivKlijenta); ;
             }
             catch (Exception ex)
             {
