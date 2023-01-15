@@ -101,3 +101,49 @@ TIME: 14.1.2023. 20:54:47CRITICAL LEVEL: : User emily failed to access http://t
 14.1.2023. 20:59:43User wcfclient successfully accessed to http://tempuri.org/IServices/CreateFile.
 14.1.2023. 20:59:50User wcfclient successfully accessed to http://tempuri.org/IServices/AddPerson.
 14.1.2023. 20:59:51User wcfclient successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:19:02User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 21:19:09User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 21:19:14User emily successfully accessed to http://tempuri.org/IServices/AddPerson.
+14.1.2023. 21:19:16User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:19:17User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:19:18User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:19:19User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:19:19User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:19:20User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:19:20User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:19:20User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:19:21User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:21:46User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 21:21:52User emily successfully accessed to http://tempuri.org/IServices/DeleteFile.
+14.1.2023. 21:22:33User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 21:23:44User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 21:25:06User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 21:26:06User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 21:28:03User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+14.1.2023. 21:43:26User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+TIME: 14.1.2023. 21:43:31LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:43:36LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:43:37LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:43:38LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:43:38MEDIUM LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:43:39CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:43:39CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:43:39CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:43:40CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:43:40CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:43:40CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+14.1.2023. 21:45:13User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+TIME: 14.1.2023. 21:45:15LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:45:16LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:45:17LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:45:18LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:45:21MEDIUM LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+14.1.2023. 21:46:20User emily successfully accessed to http://tempuri.org/IServices/CreateFile.
+TIME: 14.1.2023. 21:46:21LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:46:22LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:46:23LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:46:24LOW LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:46:25MEDIUM LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:46:34CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:46:35CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..
+TIME: 14.1.2023. 21:46:37CRITICAL LEVEL: : User emily failed to access http://tempuri.org/IServices/DeleteFile. Reason: DeleteFile method need Delete permission..

@@ -40,13 +40,12 @@ namespace XMSServer
         public static void DeleteXmlFile(string imeKlijenta)
         {
 
-            
-           
-                
+            try
+            {
+                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
+                File.Delete(path);
                 try
                 {
-                    string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
-                    File.Delete(path);
                     Audit.AuthorizationSuccess(imeKlijenta,
                                     OperationContext.Current.IncomingMessageHeaders.Action);
 
@@ -54,36 +53,40 @@ namespace XMSServer
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error: {0}", ex.Message);
-                    DateTime time = DateTime.Now;
+                }
+            }
+            catch (Exception e)
+            {
+                DateTime time = DateTime.Now;
 
-                    times.Add(time);
-                    foreach (DateTime time1 in times)
+                times.Add(time);
+                foreach (DateTime time1 in times)
+                {
+                    if ((times[times.Count - 1] - time1).TotalSeconds > period)
                     {
-                        if ((times[times.Count - 1] - time1).TotalSeconds > period)
-                        {
-                            times.Remove(time1);
-                        }
-                    }
-                    if (times.Count >= brojPokusaja + 1)
-                    {
-                        //to do
-                        Audit.AuthorizationFailed(imeKlijenta,
-                        OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "CRITICAL LEVEL: ");
-                    }
-                    else if (times.Count == brojPokusaja)
-                    {
-                        //medium risk
-                        Audit.AuthorizationFailed(imeKlijenta,
-                        OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "MEDIUM LEVEL: ");
-                    }
-                    else
-                    {
-                        Audit.AuthorizationFailed(imeKlijenta,
-                        OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "LOW LEVEL: ");
+                        times.Remove(time1);
                     }
                 }
-            
-            
+                if (times.Count >= brojPokusaja + 1)
+                {
+                    //to do
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "CRITICAL LEVEL: ");
+                }
+                else if (times.Count == brojPokusaja)
+                {
+                    //medium risk
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "MEDIUM LEVEL: ");
+                }
+                else
+                {
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFile method need Delete permission.", "LOW LEVEL: ");
+                }
+            }
+
+
         }
 
 

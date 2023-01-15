@@ -10,12 +10,6 @@ C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\XMSServer\bin\Debug\ServiceContra
 C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.csproj.CopyComplete
 C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.exe
 C:\Users\Emily\Desktop\SBES_novi\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.pdb
-C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.csproj.AssemblyReference.cache
-C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.AuditEventFile.resources
-C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.csproj.GenerateResource.cache
-C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.csproj.CoreCompileInputs.cache
-C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.exe
-C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.pdb
 C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\bin\Debug\XMSServer.exe.config
 C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\bin\Debug\XMSServer.exe
 C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\bin\Debug\XMSServer.pdb
@@ -23,4 +17,10 @@ C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\bin\Debug\Manager.d
 C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\bin\Debug\ServiceContracts.dll
 C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\bin\Debug\Manager.pdb
 C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\bin\Debug\ServiceContracts.pdb
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.csproj.AssemblyReference.cache
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.AuditEventFile.resources
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.csproj.GenerateResource.cache
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.csproj.CoreCompileInputs.cache
 C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.csproj.CopyComplete
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.exe
+C:\Users\Emily\Desktop\Sbes_projekat\SBES_PROJEKAT\XMSServer\obj\Debug\XMSServer.pdb
