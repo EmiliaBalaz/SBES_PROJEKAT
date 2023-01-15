@@ -31,8 +31,8 @@ namespace XMSServer
                 writer.Flush();
             }
 
-            List<FileSystemRights> pravaPristupa = new List<FileSystemRights>() { FileSystemRights.Read, FileSystemRights.CreateFiles };
-            List<FileSystemRights> nemaPristupa = new List<FileSystemRights>() { FileSystemRights.Delete, FileSystemRights.Modify };
+            List<FileSystemRights> pravaPristupa = new List<FileSystemRights>() { FileSystemRights.Read, FileSystemRights.CreateFiles, FileSystemRights.Modify };
+            List<FileSystemRights> nemaPristupa = new List<FileSystemRights>() { FileSystemRights.Delete };
             AccessControlList.AddAllow(accountName, pravaPristupa, $"{nazivKlijenta}.xml");
             AccessControlList.AddDeny(accountName, nemaPristupa, $"{nazivKlijenta}.xml");
         }
@@ -97,9 +97,8 @@ namespace XMSServer
                 string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
                 var xml = XDocument.Load(path);
                 var root = xml.Root;
-                root.Add(new XElement("Osoba", new XElement("Id", osoba.Id),
-                                  new XElement("Naziv", osoba.Naziv),
-                                  new XElement("Tip", osoba.TipOsobe.ToString())));
+                root.Add(new XElement(osoba.TipOsobe.ToString(), new XElement("Id", osoba.Id),
+                                  new XElement("Naziv", osoba.Naziv)));
                 xml.Save(path);
                 try
                 {
@@ -219,7 +218,6 @@ namespace XMSServer
                     {
                         Console.WriteLine(element.Element("Id").Value);
                         Console.WriteLine(element.Element("Naziv").Value);
-                        Console.WriteLine(element.Element("Tip").Value);
                         break;
                     }
                 }

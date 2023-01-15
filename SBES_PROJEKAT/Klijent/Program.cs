@@ -16,7 +16,7 @@ namespace Klijent
     {
         static void Main(string[] args)
         {
-            string srvCertCN = "emily"; //wcfservice
+            string srvCertCN = "wcfservice"; //wcfservice
             NetTcpBinding binding = new NetTcpBinding();
 
             binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;
@@ -32,6 +32,7 @@ namespace Klijent
 
             using (ClientProxy proxy = new ClientProxy(binding, address))
             {
+                //((IContextChannel)proxy).OperationTimeout = new TimeSpan(0, 30, 0);
                 while (true)
                 {
                     Console.WriteLine("IZABERITE JEDNU OD OPCIJA: ");
@@ -52,8 +53,24 @@ namespace Klijent
                             string id = Console.ReadLine();
                             Console.WriteLine("Naziv: ");
                             string naziv = Console.ReadLine();
-
-                            proxy.AddPerson(id, new Osoba(Tip.STUDENT, naziv, id),nazivKlijenta);
+                            Console.WriteLine("Tip: ");
+                            Console.WriteLine("1.STUDENT\n2.PROFESOR\n3.PREDMET\n");
+                            string tipobjekta = Console.ReadLine();
+                            switch (tipobjekta)
+                            {
+                                case "1":
+                                    proxy.AddPerson(id, new Osoba(Tip.STUDENT, naziv, id), nazivKlijenta);
+                                    break;
+                                case "2":
+                                    proxy.AddPerson(id, new Osoba(Tip.PROFESOR, naziv, id), nazivKlijenta);
+                                    break;
+                                case "3":
+                                    proxy.AddPerson(id, new Osoba(Tip.PREDMET, naziv, id), nazivKlijenta);
+                                    break;
+                                default:
+                                    break;
+                            }
+                            
                             break;
                         case "2":
                             Console.WriteLine("Unesite id osobe: ");

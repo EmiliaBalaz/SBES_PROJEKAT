@@ -15,6 +15,7 @@ namespace Klijent
     {
 
         IServices factory;
+        
         public ClientProxy(NetTcpBinding binding, EndpointAddress address) : base(binding, address)
         {
             //cltCertCN je podesen na korisnicko ime klijenta 

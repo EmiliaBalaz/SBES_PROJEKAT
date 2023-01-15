@@ -23,7 +23,7 @@ namespace XMSServer
             binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Windows;
             binding.Security.Transport.ProtectionLevel = System.Net.Security.ProtectionLevel.EncryptAndSign;
             //Formater.ParseName(WindowsIdentity.GetCurrent().Name.ToLower())
-            string signCertCN = "emily" + "_sign";
+            string signCertCN = "wcfservice" + "_sign";
 
             using (ClientProxy proxy = new ClientProxy(binding, address))
             {

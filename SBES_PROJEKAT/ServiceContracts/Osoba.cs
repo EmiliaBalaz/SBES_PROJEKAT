@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ServiceContracts
 {
-    public enum Tip { STUDENT, PROFESOR }
+    public enum Tip { STUDENT, PROFESOR, PREDMET}
 
     [DataContract]
     public class Osoba
