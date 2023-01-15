@@ -16,7 +16,7 @@ namespace Klijent
     {
         static void Main(string[] args)
         {
-            string srvCertCN = "wcfservice"; //wcfservice
+            string srvCertCN = "emily"; //wcfservice
             NetTcpBinding binding = new NetTcpBinding();
 
             binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;
@@ -33,6 +33,7 @@ namespace Klijent
             using (ClientProxy proxy = new ClientProxy(binding, address))
             {
                 //((IContextChannel)proxy).OperationTimeout = new TimeSpan(0, 30, 0);
+                proxy.Endpoint.Binding.CloseTimeout = new TimeSpan(30, 30, 30);
                 while (true)
                 {
                     Console.WriteLine("IZABERITE JEDNU OD OPCIJA: ");

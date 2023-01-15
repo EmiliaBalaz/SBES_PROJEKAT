@@ -13,6 +13,8 @@ namespace MASServer
         static void Main(string[] args)
         {
             NetTcpBinding binding = new NetTcpBinding();
+            binding.ReceiveTimeout = new TimeSpan(0, 10, 0);
+            binding.SendTimeout = new TimeSpan(0, 10, 0);
             string address = "net.tcp://localhost:9999/SecurityService";
 
             //Autentifikacija tipa Windows

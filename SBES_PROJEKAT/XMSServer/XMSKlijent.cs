@@ -23,10 +23,11 @@ namespace XMSServer
             binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Windows;
             binding.Security.Transport.ProtectionLevel = System.Net.Security.ProtectionLevel.EncryptAndSign;
             //Formater.ParseName(WindowsIdentity.GetCurrent().Name.ToLower())
-            string signCertCN = "wcfservice" + "_sign";
+            string signCertCN = "emily" + "_sign";
 
             using (ClientProxy proxy = new ClientProxy(binding, address))
             {
+                proxy.Endpoint.Binding.CloseTimeout = new TimeSpan(30, 30, 30);
                 X509Certificate2 certificateSign = CertManager.GetCertificateFromStorage(StoreName.My,
                     StoreLocation.LocalMachine, signCertCN);
 

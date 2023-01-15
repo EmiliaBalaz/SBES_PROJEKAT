@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace Manager
 {
-    public class AccessControlList : System.Collections.CollectionBase
+    //: System.Collections.CollectionBase
+    public class AccessControlList 
     {
         //kljuc je account, vrednost lista prava pristupa
 

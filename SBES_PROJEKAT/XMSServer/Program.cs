@@ -21,6 +21,8 @@ namespace XMSServer
             string srvCertCN = Formater.ParseName(WindowsIdentity.GetCurrent().Name.ToLower());
             Console.WriteLine(srvCertCN);
             NetTcpBinding binding = new NetTcpBinding();
+            binding.ReceiveTimeout = new TimeSpan(0, 10, 0);
+            binding.SendTimeout = new TimeSpan(0, 10, 0);
             binding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;
 
             string address = "net.tcp://localhost:9997/Services";
@@ -46,6 +48,8 @@ namespace XMSServer
 
             host.Description.Behaviors.Remove<ServiceSecurityAuditBehavior>();
             host.Description.Behaviors.Add(newAudit);
+
+            
 
             try
             {
