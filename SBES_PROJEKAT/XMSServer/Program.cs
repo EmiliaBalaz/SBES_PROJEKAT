@@ -67,11 +67,6 @@ namespace XMSServer
             {
                 host.Close();
             }
-
-
-            Console.ReadLine();
-          
-
         }
     }
 }

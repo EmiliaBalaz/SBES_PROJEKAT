@@ -11,7 +11,7 @@ namespace MASServer
     {
         static public void WriteToTxt(string data)
         {
-            string path = "C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\Podaci.txt";
+            string path = "D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\Podaci.txt";
             TextWriter tw = new StreamWriter(path, true);
             tw.WriteLine(data);
             tw.Close();

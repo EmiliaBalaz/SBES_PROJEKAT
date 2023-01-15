@@ -23,7 +23,7 @@ namespace XMSServer
         {
             string accountName = Formater.ParseName(WindowsIdentity.GetCurrent().Name.ToLower());
             Console.WriteLine(accountName);
-            string path = $"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{nazivKlijenta}.xml";
+            string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{nazivKlijenta}.xml";
             using (XmlWriter writer = XmlWriter.Create(path))
             {
                 writer.WriteStartElement("List");
@@ -31,15 +31,15 @@ namespace XMSServer
                 writer.Flush();
             }
 
-            List<FileSystemRights> pravaPristupa = new List<FileSystemRights>() { FileSystemRights.Read, FileSystemRights.CreateFiles, FileSystemRights.Modify };
-            List<FileSystemRights> nemaPristupa = new List<FileSystemRights>() { FileSystemRights.Delete };
+            List<FileSystemRights> pravaPristupa = new List<FileSystemRights>() { FileSystemRights.Read, FileSystemRights.CreateFiles };
+            List<FileSystemRights> nemaPristupa = new List<FileSystemRights>() { FileSystemRights.Delete, FileSystemRights.Modify };
             AccessControlList.AddAllow(accountName, pravaPristupa, $"{nazivKlijenta}.xml");
             AccessControlList.AddDeny(accountName, nemaPristupa, $"{nazivKlijenta}.xml");
         }
 
         public static void DeleteXmlFile(string imeKlijenta)
         {
-
+            
             try
             {
                 string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
@@ -94,28 +94,61 @@ namespace XMSServer
         {
             try
             {
-                string path = $"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{imeKlijenta}.xml";
+                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
                 var xml = XDocument.Load(path);
                 var root = xml.Root;
                 root.Add(new XElement("Osoba", new XElement("Id", osoba.Id),
                                   new XElement("Naziv", osoba.Naziv),
                                   new XElement("Tip", osoba.TipOsobe.ToString())));
                 xml.Save(path);
-                Audit.AuthorizationSuccess(imeKlijenta,
-                OperationContext.Current.IncomingMessageHeaders.Action);
+                try
+                {
+                    Audit.AuthorizationSuccess(imeKlijenta,
+                                    OperationContext.Current.IncomingMessageHeaders.Action);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: {0}", ex.Message);
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}", e.Message);
-                Audit.AuthorizationFailed(imeKlijenta,
-                   OperationContext.Current.IncomingMessageHeaders.Action, "WriteToXml method need Modify permission.", " ");
+                DateTime time = DateTime.Now;
+
+                times.Add(time);
+                foreach (DateTime time1 in times)
+                {
+                    if ((times[times.Count - 1] - time1).TotalSeconds > period)
+                    {
+                        times.Remove(time1);
+                    }
+                }
+                if (times.Count >= brojPokusaja + 1)
+                {
+                    //to do
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "WriteToXml method need Modify permission.", "CRITICAL LEVEL: ");
+                }
+                else if (times.Count == brojPokusaja)
+                {
+                    //medium risk
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "WriteToXml method need Modify permission.", "MEDIUM LEVEL: ");
+                }
+                else
+                {
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "WriteToXml method need Modify permission.", "LOW LEVEL: ");
+                }
             }
         }
         public static void DeleteFromXml(string id, string imeKlijenta)
         {
             try
             {
-                string path = $"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{imeKlijenta}.xml";
+                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
                 var xml = XDocument.Load(path);
                 var root = xml.Root;
                 foreach (var element in root.Elements())
@@ -127,14 +160,47 @@ namespace XMSServer
                     }
                 }
                 xml.Save(path);
-                Audit.AuthorizationSuccess(imeKlijenta,
-                OperationContext.Current.IncomingMessageHeaders.Action);
+                try
+                {
+                    Audit.AuthorizationSuccess(imeKlijenta,
+                                    OperationContext.Current.IncomingMessageHeaders.Action);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: {0}", ex.Message);
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}", e.Message);
-                Audit.AuthorizationFailed(imeKlijenta,
-                   OperationContext.Current.IncomingMessageHeaders.Action, "DeleteFromXml method need Modify permission.", " ");
+                DateTime time = DateTime.Now;
+
+                times.Add(time);
+                foreach (DateTime time1 in times)
+                {
+                    if ((times[times.Count - 1] - time1).TotalSeconds > period)
+                    {
+                        times.Remove(time1);
+                    }
+                }
+                if (times.Count >= brojPokusaja + 1)
+                {
+                    //to do
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "Delete method need Modify permission.", "CRITICAL LEVEL: ");
+                }
+                else if (times.Count == brojPokusaja)
+                {
+                    //medium risk
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "Delete method need Modify permission.", "MEDIUM LEVEL: ");
+                }
+                else
+                {
+                    Audit.AuthorizationFailed(imeKlijenta,
+                    OperationContext.Current.IncomingMessageHeaders.Action, "Delete method need Modify permission.", "LOW LEVEL: ");
+                }
             }
         }
 
@@ -142,7 +208,7 @@ namespace XMSServer
         {
             try
             {
-                string path = $"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{imeKlijenta}.xml";
+                string path = $"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{imeKlijenta}.xml";
 
                 var xml = XDocument.Load(path);
 

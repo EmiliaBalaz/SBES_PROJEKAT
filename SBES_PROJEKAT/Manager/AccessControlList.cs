@@ -27,7 +27,7 @@ namespace Manager
             }
             foreach (var el in listaPravaPristupa)
             {
-                FileSystemSecurity.AddFileSecurity($"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{nazivXml}", accountname, el, AccessControlType.Allow);
+                FileSystemSecurity.AddFileSecurity($"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{nazivXml}", accountname, el, AccessControlType.Allow);
             }
         }
 
@@ -43,7 +43,7 @@ namespace Manager
             }
             foreach (var el in listaPravaPristupa)
             {
-                FileSystemSecurity.AddFileSecurity($"C:\\Users\\Emily\\Desktop\\Sbes_projekat\\SBES_PROJEKAT\\Manager\\{nazivXml}", accountname, el, AccessControlType.Deny);
+                FileSystemSecurity.AddFileSecurity($"D:\\Fakultet\\CETVRTA GODINA\\PROJEKAT\\Manager\\{nazivXml}", accountname, el, AccessControlType.Deny);
             }
         }
 
