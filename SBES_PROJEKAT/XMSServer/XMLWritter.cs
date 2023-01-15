@@ -63,7 +63,7 @@ namespace XMSServer
                     DateTime time = DateTime.Now;
 
                     times.Add(time);
-                    foreach (DateTime time1 in times)
+                    foreach (DateTime time1 in times.ToList())
                     {
                         if ((times[times.Count - 1] - time1).TotalSeconds > period)
                         {
@@ -119,7 +119,7 @@ namespace XMSServer
                 DateTime time = DateTime.Now;
 
                 times.Add(time);
-                foreach (DateTime time1 in times)
+                foreach (DateTime time1 in times.ToList())
                 {
                     if ((times[times.Count - 1] - time1).TotalSeconds > period)
                     {
@@ -178,7 +178,7 @@ namespace XMSServer
                 DateTime time = DateTime.Now;
 
                 times.Add(time);
-                foreach (DateTime time1 in times)
+                foreach (DateTime time1 in times.ToList())
                 {
                     if ((times[times.Count - 1] - time1).TotalSeconds > period)
                     {
